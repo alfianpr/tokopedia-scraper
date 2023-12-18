@@ -21,6 +21,6 @@ def standarized_columns(df: pd.DataFrame) -> pd.DataFrame:
     
     df.columns = df.columns.str.lower()
     for i, j in replace.items():
-        df.columns = df.columns.str.replace(i, j, regex=True)
+        df.columns = df.columns.str.replace(i, j, regex=False)
     df["job_insertdate"] = jobtime()
     return df
