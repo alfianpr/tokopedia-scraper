@@ -13,8 +13,8 @@ logging.basicConfig(#filename='./logs/keyword.log',
 
 api = "https://gql.tokopedia.com/graphql/SearchProductQueryV4"
 
-CATEGORY_ID = 5506
-FILE_NAME = "Susu Bayi & Anak"
+CATEGORY_ID = 1768
+FILE_NAME = "atasan wanita"
 ROWS = 60
 PAGE = 100
 
