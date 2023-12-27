@@ -6,12 +6,6 @@ def jobtime() -> datetime:
   jobtime = datetime.datetime.strptime(sa_time.strftime('%Y-%m-%d %H:%M:%S'),'%Y-%m-%d %H:%M:%S')
   return jobtime
 
-# def clean_func (col, clean_col):
-#   col.columns = col.columns.str.lower()
-#   for i, j in clean_col.items():
-#     col.columns = col.columns.str.replace(i, j, regex=True)
-#   return col
-
 def standarized_columns(df: pd.DataFrame) -> pd.DataFrame:
     replace = {' ' : '_',
                '-' : '_',
@@ -24,3 +18,9 @@ def standarized_columns(df: pd.DataFrame) -> pd.DataFrame:
         df.columns = df.columns.str.replace(i, j, regex=False)
     df["job_insertdate"] = jobtime()
     return df
+
+def save_df_to_csv(df, dir, file_name, header):
+  df.to_csv(f"{dir}/{file_name.lower().replace(' ', '_')}.csv", 
+            index=False, 
+            mode='a',
+            header=header)

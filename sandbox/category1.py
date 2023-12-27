@@ -13,8 +13,8 @@ logging.basicConfig(#filename='./logs/keyword.log',
 
 api = "https://gql.tokopedia.com/graphql/SearchProductQueryV4"
 
-CATEGORY_ID = 1768
-FILE_NAME = "atasan wanita"
+CATEGORY_ID = 3844
+FILE_NAME = "laptop"
 ROWS = 60
 PAGE = 100
 
