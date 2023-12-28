@@ -594,7 +594,7 @@ def iterate_product_page(
             df=df, 
             column=column_product_url, 
             index_list=index_list_product_url
-    )
+    ) 
 
     if len(shop_name) == len(product_url):
         prod = []
